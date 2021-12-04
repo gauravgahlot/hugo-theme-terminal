@@ -27,9 +27,13 @@
   </span>
   {{ end }}
 
-  {{ if .Params.Cover }}
-    <img src="{{ .Params.Cover | absURL }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
-  {{ end }}
+  <!-- do not display cover on blog post single page
+
+    {{ if .Params.Cover }}
+      <img src="{{ .Params.Cover | absURL }}" class="post-cover" alt="{{ .Title | plainify | default " " }}" />
+    {{ end }}
+
+  -->
 
   {{ if .Params.Toc }}
     <div class="table-of-contents">
